@@ -15,6 +15,7 @@
 		8F15768E151E23FB00FD5CF5 /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F15768D151E23FB00FD5CF5 /* LPAppDelegate.m */; };
 		8F157691151E23FB00FD5CF5 /* LPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F157690151E23FB00FD5CF5 /* LPViewController.m */; };
 		8F157694151E23FB00FD5CF5 /* LPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F157692151E23FB00FD5CF5 /* LPViewController.xib */; };
+		8F15769C151E259700FD5CF5 /* LP_Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F15769B151E259700FD5CF5 /* LP_Operation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		8F15767D151E23FB00FD5CF5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8F15767F151E23FB00FD5CF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F157681151E23FB00FD5CF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8F157685151E23FB00FD5CF5 /* test_NSOperation-Info.plist */ = {isa = PBXFileReference; path = "test_NSOperation-Info.plist"; sourceTree = "<group>"; };
+		8F157685151E23FB00FD5CF5 /* test_NSOperation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "test_NSOperation-Info.plist"; sourceTree = "<group>"; };
 		8F157687151E23FB00FD5CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F157689151E23FB00FD5CF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8F15768B151E23FB00FD5CF5 /* test_NSOperation-Prefix.pch */ = {isa = PBXFileReference; path = "test_NSOperation-Prefix.pch"; sourceTree = "<group>"; };
-		8F15768C151E23FB00FD5CF5 /* LPAppDelegate.h */ = {isa = PBXFileReference; path = LPAppDelegate.h; sourceTree = "<group>"; };
+		8F15768B151E23FB00FD5CF5 /* test_NSOperation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test_NSOperation-Prefix.pch"; sourceTree = "<group>"; };
+		8F15768C151E23FB00FD5CF5 /* LPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAppDelegate.h; sourceTree = "<group>"; };
 		8F15768D151E23FB00FD5CF5 /* LPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPAppDelegate.m; sourceTree = "<group>"; };
-		8F15768F151E23FB00FD5CF5 /* LPViewController.h */ = {isa = PBXFileReference; path = LPViewController.h; sourceTree = "<group>"; };
+		8F15768F151E23FB00FD5CF5 /* LPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPViewController.h; sourceTree = "<group>"; };
 		8F157690151E23FB00FD5CF5 /* LPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPViewController.m; sourceTree = "<group>"; };
 		8F157693151E23FB00FD5CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LPViewController.xib; sourceTree = "<group>"; };
+		8F15769A151E259700FD5CF5 /* LP_Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LP_Operation.h; sourceTree = "<group>"; };
+		8F15769B151E259700FD5CF5 /* LP_Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LP_Operation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				8F15768F151E23FB00FD5CF5 /* LPViewController.h */,
 				8F157690151E23FB00FD5CF5 /* LPViewController.m */,
 				8F157692151E23FB00FD5CF5 /* LPViewController.xib */,
+				8F15769A151E259700FD5CF5 /* LP_Operation.h */,
+				8F15769B151E259700FD5CF5 /* LP_Operation.m */,
 				8F157684151E23FB00FD5CF5 /* Supporting Files */,
 			);
 			path = test_NSOperation;
@@ -164,6 +169,7 @@
 				8F15768A151E23FB00FD5CF5 /* main.m in Sources */,
 				8F15768E151E23FB00FD5CF5 /* LPAppDelegate.m in Sources */,
 				8F157691151E23FB00FD5CF5 /* LPViewController.m in Sources */,
+				8F15769C151E259700FD5CF5 /* LP_Operation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +281,7 @@
 				8F157699151E23FB00FD5CF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

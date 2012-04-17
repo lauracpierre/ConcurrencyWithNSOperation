@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class LPViewController;
-
-@interface LPAppDelegate : UIResponder <UIApplicationDelegate>
+@interface LPAppDelegate : UIResponder <UIApplicationDelegate> {
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UITabBarController * tabBarController;
 
-@property (strong, nonatomic) LPViewController *viewController;
 
 @end

@@ -9,19 +9,36 @@
 #import "LPAppDelegate.h"
 
 #import "LPViewController.h"
+#import "LP_Operation.h"
 
 @implementation LPAppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize tabBarController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    /* Gestion du CapteursViewController */
+    LPViewController * LPVC = [[LPViewController alloc] initWithNibName:@"LPViewController" bundle:nil andNumberOfMaxConcurrencyOperations:0];
+    UINavigationController * navController1 = [[UINavigationController alloc] initWithRootViewController:LPVC];
+    [navController1 setTitle:@"Concurrent"];
+    
+    /* Gestion du ActionneursViewController */
+    LPViewController * LPVC2 = [[LPViewController alloc] initWithNibName:@"LPViewController" bundle:nil andNumberOfMaxConcurrencyOperations:1];
+    [[LPVC queue] setMaxConcurrentOperationCount:1]; // only one operation at a time
+    UINavigationController * navController2 = [[UINavigationController alloc] initWithRootViewController:LPVC2];
+    [navController2 setTitle:@"Non Concurrent"];
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController1, navController2, nil];
+    
     // Override point for customization after application launch.
-    self.viewController = [[LPViewController alloc] initWithNibName:@"LPViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

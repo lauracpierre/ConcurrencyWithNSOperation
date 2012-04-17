@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LPViewController : UIViewController
+@interface LPViewController : UIViewController {
+    
+}
+@property (retain, nonatomic) NSOperationQueue * queue;
+@property (weak, nonatomic) IBOutlet UITextField *Atext;
+@property (weak, nonatomic) IBOutlet UITextField *BText;
+@property (weak, nonatomic) IBOutlet UITextField *CText;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+- (IBAction)buttonWasPressed:(id)sender;
+
+- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andNumberOfMaxConcurrencyOperations:(int)number;
+
 
 @end

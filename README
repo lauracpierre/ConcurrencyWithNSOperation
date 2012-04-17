@@ -1,0 +1,6 @@
+Here is a little sample test That i wrote to have a better understanding of how NSOperation works with NSOperationQueue
+
+We have basically two views here. They'll both launch three NSOperation that will run in the background. The first view has a MaxOperation set to 1, and the other is set to default behavior. 
+This exemple is great to realize that all NSOperations that you had to the queue will run "at the same time" if you don't set the max number of operation running in the queue.
+
+If in most cases that is what you want, this can can get tricky when fetching/changing a database/Coredata in multiple NSOperations
