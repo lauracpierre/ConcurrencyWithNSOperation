@@ -22,13 +22,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     /* Gestion du CapteursViewController */
-    LPViewController * LPVC = [[LPViewController alloc] initWithNibName:@"LPViewController" bundle:nil andNumberOfMaxConcurrencyOperations:0];
+    LPViewController * LPVC = [[LPViewController alloc] initWithNibName:@"LPViewController" bundle:nil andNumberOfMaxConcurrencyOperations:NSOperationQueueDefaultMaxConcurrentOperationCount];
+    
     UINavigationController * navController1 = [[UINavigationController alloc] initWithRootViewController:LPVC];
     [navController1 setTitle:@"Concurrent"];
     
     /* Gestion du ActionneursViewController */
     LPViewController * LPVC2 = [[LPViewController alloc] initWithNibName:@"LPViewController" bundle:nil andNumberOfMaxConcurrencyOperations:1];
-    [[LPVC queue] setMaxConcurrentOperationCount:1]; // only one operation at a time
+    
     UINavigationController * navController2 = [[UINavigationController alloc] initWithRootViewController:LPVC2];
     [navController2 setTitle:@"Non Concurrent"];
     

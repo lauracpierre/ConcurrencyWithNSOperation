@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *BText;
 @property (weak, nonatomic) IBOutlet UITextField *CText;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UILabel *label;
 - (IBAction)buttonWasPressed:(id)sender;
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andNumberOfMaxConcurrencyOperations:(int)number;
